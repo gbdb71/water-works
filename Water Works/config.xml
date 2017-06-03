@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<widget xmlns   = "http://www.w3.org/ns/widgets"
-    xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.calebwin.waterworks"
-    versionCode = "1"
-    version     = "1.0.0" >
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.calebwin.waterworks" versionCode="1" version="1.0.0">
 
-<!-- versionCode is optional and Android only -->
+    <!-- versionCode is optional and Android only -->
 
-  <name>Water Works</name>
+    <name>Water Works</name>
 
-  <description>
-      Must catch those crates.
-  </description>
+    <description>
+        Must catch those crates.
+    </description>
 
-  <author href="https://build.phonegap.com" email="calebhwin@gmail.com">
-      Caleb Winston
-  </author>
+    <author href="https://build.phonegap.com" email="calebhwin@gmail.com">
+        Caleb Winston
+    </author>
+
+    <plugin name="cordova-plugin-headercolor" />
+    <preference name="HeaderColor" value="#66bb6a" />
+       
 
 </widget>
