@@ -13,8 +13,12 @@
         Caleb Winston
     </author>
 
+    <preference name="phonegap-version" value="cli-6.5.0" />
+    <preference name="android-build-tool" value="gradle" />
     <plugin name="cordova-plugin-headercolor" />
-    <preference name="HeaderColor" value="#66bb6a" />
-       
-
+    <preference name="HeaderColor" value="#6eac67a" />
+    <plugin name="cordova-plugin-statusbar" spec="2.2.3" />
+    <preference name="StatusBarOverlaysWebView" value="true" source="npm" />
+    <preference name="StatusBarBackgroundColor" value="#eac67a" />
+    
 </widget>
