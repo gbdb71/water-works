@@ -2,7 +2,7 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
 }
 
-var x = -width/2;
+var x = -0;
 var width,height;
 var page = 1;
 function game() {
