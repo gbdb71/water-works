@@ -59,7 +59,7 @@ function game() {
     endShape();
     push();
     noStroke();
-    fill(181, 99, 87);
+    fill(255,77,111);
     translate(width/2,crateY);
     rotate(crateR);
     rect(-crateS/2,-crateS/2,crateS,crateS);
