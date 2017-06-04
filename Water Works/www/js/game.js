@@ -71,9 +71,10 @@ function game() {
     pop();
     fill(0);
     textSize(100);
-    textFont("sans-serif");
+    textFont("sans-serif Bold");
     textAlign(CENTER,CENTER);
-    text("Water\nWorks", titleX, height*7/16);
+    text("WATER", titleX, height*27/64);
+    text("WORKS", titleX, height*28/64);
     titleX+=(titleXTo-titleX)/10;
 }
 
