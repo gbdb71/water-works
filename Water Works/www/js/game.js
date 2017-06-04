@@ -97,6 +97,7 @@ function game() {
                 crateYAccl=5;
                 crateRAccl=0.1;
                 score++;
+                cratePaused=false;
             }
         } else {
             if(mouseIsPressed) {
@@ -105,6 +106,7 @@ function game() {
                 crateYAccl=5;
                 crateRAccl=0.1;
                 score=0;
+                cratePaused=false;
             }
         }
     }
