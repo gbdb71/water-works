@@ -103,14 +103,13 @@ function game() {
             }
         } else {
             if(mouseIsPressed&&scoreFade>120) {
-                /*crateY=-50;
+                crateY=-50;
                 scoreFadeTo=0;
                 crateR=0;
                 crateYAccl=5;
                 crateRAccl=0.1;
                 score=0;
-                cratePaused=false;*/
-                
+                cratePaused=false;
             }
         }
     }
@@ -134,8 +133,8 @@ function game() {
     textFont("sans-serif");
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
-    text(TAP TO PLAY AGAIN, width/2, height*28/64);
-    //scoreFade+=(scoreFadeTo-scoreFade)/10;
+    text("TAP TO PLAY AGAIN", width/2, height*28/64);
+    scoreFade+=(scoreFadeTo-scoreFade)/10;
 }
 
 function draw() {
