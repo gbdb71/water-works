@@ -1,3 +1,9 @@
+var fontRegular, fontItalic, fontBold;
+function preload() {
+   fontRegular = loadFont("Lovelo Black.otf");
+   fontItalic = loadFont("Lovelo Line Bold.otf");
+   fontBold = loadFont("Lovelo Line Light.otf");
+}
 var x = -100;
 var titleXTo = 0;
 function setup() {
@@ -70,8 +76,8 @@ function game() {
     }
     pop();
     fill(0);
-    textSize(70);
-    textFont("Century Gothic");
+    textSize(100);
+    textFont(fontItalic);
     textAlign(CENTER,CENTER);
     text("Water\nWorks", titleX, height*7/16);
     titleX+=(titleXTo-titleX)/10;
