@@ -20,6 +20,7 @@ var hintLineFade = 0;
 var score = 0;
 var scoreFade = 0;
 var scoreFadeTo = 0;
+var mouseIsClicked = false;
 function game() {
     background(229,209,196);
     fill(247, 245, 230);
@@ -103,7 +104,7 @@ function game() {
             }
         } else {
             scoreFadeTo=500;
-            if(mouseIsPressed&&scoreFade>470) {
+            if(mouseIsClicked&&scoreFade>470) {
                 crateY=-50;
                 scoreFadeTo=0;
                 crateR=0;
@@ -146,6 +147,7 @@ function draw() {
             game();
             break;
     }
+    mouseIsClicked = false;
 }
 function touchEnded() {
     toX=0;
@@ -161,4 +163,7 @@ function touchStarted() {
     }
     // prevent default
     return false;
+}
+function mouseClicked() {
+    mouseIsClicked=true;
 }
