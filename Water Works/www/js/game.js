@@ -155,6 +155,7 @@ function touchEnded() {
     return false;
 }
 function touchStarted() {
+    mouseIsClicked=true;
     if(titleXTo!==-width) {
         titleXTo=-width;
         cratePaused=false;
@@ -163,7 +164,4 @@ function touchStarted() {
     }
     // prevent default
     return false;
-}
-function mouseClicked() {
-    mouseIsClicked=true;
 }
