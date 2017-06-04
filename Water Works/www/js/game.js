@@ -1,6 +1,8 @@
 var x = -100;
+var titleXTo = 0;
 function setup() {
     x=-windowHeight/2;
+    titleXTo=windowWidth/2;
     createCanvas(windowWidth, windowHeight);
 }
 
@@ -9,8 +11,9 @@ var toX = 0;
 var page = 1;
 var crateY = -50;
 var crateR = 0;
-var crateYAccl = 5;
+var crateYAccl = 0;
 var crateRAccl = 0.100;
+var titleX = -200;
 var crateS = 50;
 function game() {
     background(229,209,196);
@@ -64,6 +67,12 @@ function game() {
         crateRAccl=0.1;
     }
     pop();
+    fill(0);
+    textSize(70);
+    textFont("Century Gothic");
+    textAlign(CENTER,CENTER);
+    text("Water\nWorks", titleX, height*7/16);
+    titleX+=(titleXTo-titleX)/10;
 }
 
 function draw() {
@@ -81,7 +90,11 @@ function touchEnded() {
     return false;
 }
 function touchStarted() {
-    toX=height/7;
+    if(titleXTo!==-width) {
+        titleXTo=-width;
+    } else {
+        toX=height/7;
+    }
     // prevent default
     return false;
 }
