@@ -80,7 +80,7 @@ function game() {
         //crateRAccl=0.1;
         cratePaused=true;
         crateY+=((height*3/4-x-crateS/2)-crateY)/4;
-        var diff=min(crateR-crateR%(PI/2),(crateR+90)%(PI/2)-crateR);
+        var diff=min(crateR-(crateR*180/PI)%(90),((crateR+90)*180/PI)%(90)-crateR);
         alert(diff);
         //crateR+=((crateR-crateR%90)-crateR)/4;
     }
