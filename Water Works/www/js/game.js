@@ -123,19 +123,19 @@ function game() {
     text("WATER", titleX, height*22/64);
     text("WORKS", titleX, height*31/64);
     titleX+=(titleXTo-titleX)/10;
-    /*fill(103,103,103,scoreFade);
+    fill(103,103,103,scoreFade);
     textSize(100);
     textFont("sans-serif");
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
-    text(score, titleX, height*22/64);
+    text(score, width/2, height*22/64);
     fill(103,103,103,scoreFade-130);
     textSize(30);
     textFont("sans-serif");
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
-    text(TAP TO PLAY AGAIN, titleX, height*28/64);
-    scoreFade+=(scoreFadeTo-scoreFade)/10;*/
+    text(TAP TO PLAY AGAIN, width/2, height*28/64);
+    scoreFade+=(scoreFadeTo-scoreFade)/10;
 }
 
 function draw() {
