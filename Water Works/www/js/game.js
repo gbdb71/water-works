@@ -72,7 +72,6 @@ function game() {
         crateY+=crateYAccl;
         crateR+=crateRAccl;
     } else {
-        crateY+=((height*3/4-x-crateS/2)-crateY)/4;
     }
     if(crateY+crateS*sqrt(2)/2>=height*3/4-x) {
         //crateY=-50;
@@ -80,6 +79,8 @@ function game() {
         //crateYAccl=5;
         //crateRAccl=0.1;
         cratePaused=true;
+        crateY+=((height*3/4-x-crateS/2)-crateY)/4;
+        crateR+=(crateR%360-crateR)/4;
     }
     pop();
     fill(103);
