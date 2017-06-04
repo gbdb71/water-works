@@ -28,8 +28,9 @@ function game() {
     pop();
     //line(width/2,height-x,width/2,height*3/4-x);
     x+=(toX-x)/10;
-    fill(103, 174, 202,50);
-    rect(0,height*7/8,width,height);
+    noStroke();
+    fill(103, 174, 202,90);
+    rect(0,height*13/16,width,height);
 }
 
 function draw() {
