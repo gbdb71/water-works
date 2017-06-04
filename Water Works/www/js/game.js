@@ -30,15 +30,15 @@ function game() {
     x+=(toX-x)/10;
     noStroke();
     fill(103, 174, 202,90);
-    rect(0,height*27/32,width,height);
+    rect(0,height*27/32+30,width,height);
     beginShape();
     vertex(0, height*27/32);
-    curveVertex(width*0/5, height*27/32+15*sin((frameCount-60)/15));
+    curveVertex(width*0/5, height*27/32+30);
     curveVertex(width*1/5, height*27/32+15*sin((frameCount+0)/15));
     curveVertex(width*2/5, height*27/32+15*sin((frameCount+60)/15));
     curveVertex(width*3/5, height*27/32+15*sin((frameCount+120)/15));
     curveVertex(width*4/5, height*27/32+15*sin((frameCount+180)/15));
-    curveVertex(width*5/5, height*27/32+15*sin((frameCount+240)/15));
+    curveVertex(width*5/5, height*27/32+30);
     vertex(width, height*27/32);
     endShape();
 }
