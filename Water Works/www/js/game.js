@@ -22,8 +22,8 @@ function game() {
     strokeWeight(4);
     stroke(103,103,103,hintLineFade);
     noFill();
-    for(var i = 0; i < width; i+=20) {
-        line(i,height*(3/4-1/7),i+10,height*(3/4-1/7));
+    for(var i = 0; i < width; i+=40) {
+        line(i,height*(3/4-1/7),i+20,height*(3/4-1/7));
     }
     stroke(103,103,103);
     strokeWeight(13);
@@ -66,7 +66,7 @@ function game() {
     crateY+=crateYAccl;
     crateR+=crateRAccl;
     if(titleXTo===-width) {
-        hintLineFade+=(130-hintLineFade)/10;
+        hintLineFade+=(60-hintLineFade)/10;
         crateYAccl+=0.01;
     }
     if(crateY+crateS*sqrt(2)>=height*3/4-x) {
