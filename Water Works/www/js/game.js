@@ -15,11 +15,16 @@ var crateYAccl = 0;
 var crateRAccl = 0.100;
 var titleX = -200;
 var crateS = 50;
+var hintLineFade = 0;
 function game() {
     background(229,209,196);
     fill(247, 245, 230);
-    stroke(103,103,103);
+    stroke(103,103,103,hintLineFade);
     noFill();
+    for(var i = 0; i < width/20; i++) {
+        line(i,width*(3/4+1/7),i+10,width*(3/4+1/7));
+    }
+    stroke(103,103,103);
     strokeWeight(13);
     push();
     translate(0,-x);
@@ -60,6 +65,7 @@ function game() {
     crateY+=crateYAccl;
     crateR+=crateRAccl;
     if(titleXTo===-width) {
+        hintLineFade+=(130-hintLineFade)/10;
         crateYAccl+=0.01;
     }
     if(crateY+crateS*sqrt(2)>=height*3/4-x) {
