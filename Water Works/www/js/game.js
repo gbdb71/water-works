@@ -32,6 +32,7 @@ function game() {
     fill(103, 174, 202,90);
     rect(0,height*27/32+14,width,height);
     beginShape();
+    vertex(0, height*27/32+14);
     curveVertex(0, height*27/32+14);
     //curveVertex(width*0/5, height*27/32+7*sin((frameCount+-60)/15));
     curveVertex(width*1/5, height*27/32+7*sin((frameCount+0)/15));
@@ -40,6 +41,7 @@ function game() {
     curveVertex(width*4/5, height*27/32+7*sin((frameCount+180)/15));
     //curveVertex(width*5/5, height*27/32+7*sin((frameCount+240)/15));
     curveVertex(width, height*27/32+14);
+    vertex(width, height*27/32+14);
     endShape();
 }
 
