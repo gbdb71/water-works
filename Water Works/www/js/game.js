@@ -20,8 +20,8 @@ function game() {
         line(width*i/4,height*3/2,width*i/4,height*3/4);
         if(i<3) {
             for(var j = 0; j < 6; j++) {
-                line(width*i/4,height*3/2+width*(j)/4,width*(i+1)/4,height*3/2+width*(j+1)/4);
-                line(width*i/4,height*3/2+width*(j+1)/4,width*(i+1)/4,height*3/2+width*(j)/4);
+                line(width*i/4,height*3/4+width*(j)/4,width*(i+1)/4,height*3/4+width*(j+1)/4);
+                line(width*i/4,height*3/4+width*(j+1)/4,width*(i+1)/4,height*3/4+width*(j)/4);
             } 
         }
     }
