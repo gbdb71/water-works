@@ -7,6 +7,9 @@ function setup() {
 var width,height;
 var toX = 0;
 var page = 1;
+function sin(x) {
+    return sin(x*3.1415/180);
+}
 function game() {
     background(237, 230, 182);
     fill(247, 245, 230);
@@ -33,7 +36,8 @@ function game() {
     rect(0,height*27/32,width,height);
     beginShape();
     curveVertex(0,  91);
-    curveVertex(width/5, height*27/32+5*sin(frameCount));
+    curveVertex(0, height*27/32+5*sin(frameCount-30));
+    curveVertex(width*1/5, height*27/32+5*sin(frameCount+30));
     curveVertex(width*2/5, height*27/32+5*sin(frameCount+30));
     curveVertex(width*3/5, height*27/32+5*sin(frameCount+60));
     curveVertex(width*4/5, height*27/32+5*sin(frameCount+90));
