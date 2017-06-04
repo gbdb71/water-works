@@ -99,7 +99,7 @@ function game() {
                 score++;
             }
         } else {
-            if(mousePressed) {
+            if(mouseIsPressed) {
                 crateY=-50;
                 crateR=0;
                 crateYAccl=5;
