@@ -14,7 +14,7 @@ var crateR = 0;
 var crateYAccl = 5;
 var crateRAccl = 0.05;
 var titleX = -200;
-var crateS = 50;
+var crateS = 100;
 var cratePaused = true;
 var hintLineFade = 0;
 var score = 0;
@@ -102,7 +102,8 @@ function game() {
                 cratePaused=false;
             }
         } else {
-            if(mouseIsPressed&&scoreFade>120) {
+            scoreFadeTo=500;
+            if(mouseIsPressed&&scoreFade>470) {
                 crateY=-50;
                 scoreFadeTo=0;
                 crateR=0;
