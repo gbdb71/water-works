@@ -18,7 +18,8 @@ var crateS = 50;
 var cratePaused = true;
 var hintLineFade = 0;
 var score = 0;
-var mousePressed = false;
+var scoreFade = 0;
+var scoreFadeTo = 0;
 function game() {
     background(229,209,196);
     fill(247, 245, 230);
@@ -67,6 +68,7 @@ function game() {
     rect(-crateS/2,-crateS/2,crateS,crateS);
     if(titleXTo===-width) {
         hintLineFade+=(60-hintLineFade)/10;
+        scoreFadeTo=130;
     }
     if(!cratePaused) {
         x+=(toX-x)/4;
@@ -100,25 +102,40 @@ function game() {
                 cratePaused=false;
             }
         } else {
-            if(mouseIsPressed) {
+            if(mouseIsPressed&&scoreFade>120) {
                 crateY=-50;
+                scoreFadeTo=0;
                 crateR=0;
                 crateYAccl=5;
                 crateRAccl=0.1;
                 score=0;
                 cratePaused=false;
+                
             }
         }
     }
     pop();
     fill(103);
-    textSize(100);
+    textSize(120);
     textFont("sans-serif");
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
     text("WATER", titleX, height*22/64);
     text("WORKS", titleX, height*31/64);
     titleX+=(titleXTo-titleX)/10;
+    fill(103,103,103,scoreFade);
+    textSize(100);
+    textFont("sans-serif");
+    textStyle(BOLD);
+    textAlign(CENTER,CENTER);
+    text(score, titleX, height*22/64);
+    fill(103,103,103,scoreFade-130);
+    textSize(30);
+    textFont("sans-serif");
+    textStyle(BOLD);
+    textAlign(CENTER,CENTER);
+    text(TAP TO PLAY AGAIN, titleX, height*28/64);
+    scoreFade+=(scoreFadeTo-scoreFade)/10;
 }
 
 function draw() {
@@ -134,7 +151,6 @@ function touchEnded() {
     toX=0;
     // prevent default
     return false;
-    mousePressed=false;
 }
 function touchStarted() {
     if(titleXTo!==-width) {
@@ -145,5 +161,4 @@ function touchStarted() {
     }
     // prevent default
     return false;
-    mousePressed=true;
 }
