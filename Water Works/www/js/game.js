@@ -16,6 +16,8 @@ var crateRAccl = 0.05;
 var titleX = -200;
 var crateS = 100;
 var cratePaused = true;
+var crateFade = 255;
+var crateFadeTo = 255;
 var hintLineFade = 0;
 var score = 0;
 var scoreFade = 0;
@@ -63,7 +65,8 @@ function game() {
     endShape();
     push();
     noStroke();
-    fill(103,103,103);
+    fill(103,103,103,crateFade);
+    crateFade+=(crateFadeTo-crateFade)/5;
     translate(width/2,crateY);
     rotate(crateR);
     rect(-crateS/2,-crateS/2,crateS,crateS);
@@ -94,8 +97,10 @@ function game() {
             } else {
                 crateR+=((crateR+90-diff*PI/180)-crateR)/4;
             }
-            if(abs(diff)<5) {
+            crateFadeTo=0;
+            if(crateFade<1) {
                 crateY=-50;
+                crateFadeTo=255;
                 crateR=0;
                 crateYAccl=5;
                 crateRAccl=0.1;
