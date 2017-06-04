@@ -42,7 +42,6 @@ function game() {
     }
     pop();
     //line(width/2,height-x,width/2,height*3/4-x);
-    x+=(toX-x)/4;
     noStroke();
     fill(103, 174, 202,90);
     rect(0,height*27/32+14,width,height);
@@ -68,6 +67,7 @@ function game() {
         hintLineFade+=(60-hintLineFade)/10;
     }
     if(!cratePaused) {
+        x+=(toX-x)/4;
         crateYAccl+=0.01;
         crateY+=crateYAccl;
         crateR+=crateRAccl;
