@@ -2,11 +2,11 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
 }
 
-var x = -0;
+var x = 50;
 var width,height;
 var page = 1;
 function game() {
-    background(234, 198, 122);
+    background(247, 245, 230);
     fill(247, 245, 230);
     stroke(255, 106, 92);
     noFill();
@@ -16,7 +16,6 @@ function game() {
     line(width/2,height-x,width/2,height*3/4-x);
     //line(width/2,height-x,width/2,height*3/4-x);
     x+=(0-x)/10;
-    alert(5);
 }
 
 function draw() {
