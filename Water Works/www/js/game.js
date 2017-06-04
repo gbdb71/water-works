@@ -59,7 +59,7 @@ function game() {
     endShape();
     push();
     noStroke();
-    fill(255,205,19);
+    fill(103,103,103);
     translate(width/2,crateY);
     rotate(crateR);
     rect(-crateS/2,-crateS/2,crateS,crateS);
@@ -69,7 +69,7 @@ function game() {
         hintLineFade+=(60-hintLineFade)/10;
         crateYAccl+=0.01;
     }
-    if(crateY+crateS*sqrt(2)>=height*3/4-x) {
+    if(crateY+crateS*sqrt(2)/2>=height*3/4-x) {
         //crateY=-50;
         //crateR=0;
         //crateYAccl=5;
