@@ -94,7 +94,7 @@ function game() {
             } else {
                 crateR+=((crateR+90-diff*PI/180)-crateR)/4;
             }
-            if(diff<5) {
+            if(diff<25) {
                 crateY=-50;
                 crateR=0;
                 crateYAccl=5;
