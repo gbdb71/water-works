@@ -17,6 +17,8 @@ var titleX = -200;
 var crateS = 50;
 var cratePaused = true;
 var hintLineFade = 0;
+var score = 0;
+var mousePressed = false;
 function game() {
     background(229,209,196);
     fill(247, 245, 230);
@@ -94,6 +96,15 @@ function game() {
                 crateR=0;
                 crateYAccl=5;
                 crateRAccl=0.1;
+                score++;
+            }
+        } else {
+            if(mousePressed) {
+                crateY=-50;
+                crateR=0;
+                crateYAccl=5;
+                crateRAccl=0.1;
+                score=0;
             }
         }
     }
@@ -121,6 +132,7 @@ function touchEnded() {
     toX=0;
     // prevent default
     return false;
+    mousePressed=false;
 }
 function touchStarted() {
     if(titleXTo!==-width) {
@@ -131,4 +143,5 @@ function touchStarted() {
     }
     // prevent default
     return false;
+    mousePressed=true;
 }
