@@ -83,7 +83,7 @@ function game() {
         var diff=min((crateR*180/PI)%(90),((crateR*180/PI)+90)%(90));
         diff=(crateR*180/PI)%(90);
         //alert(diff);
-        crateR+=((crateR-diff)-crateR)/4;
+        crateR+=((crateR-diff*PI/180)-crateR)/4;
     }
     pop();
     fill(103);
