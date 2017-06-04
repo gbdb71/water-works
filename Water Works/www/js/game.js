@@ -59,7 +59,9 @@ function game() {
     rect(-crateS/2,-crateS/2,crateS,crateS);
     crateY+=crateYAccl;
     crateR+=crateRAccl;
-    crateYAccl+=0.01;
+    if(titleXTo===-width) {
+        crateYAccl+=0.01;
+    }
     if(crateY+crateS*sqrt(2)>=height*3/4-x) {
         //crateY=-50;
         //crateR=0;
@@ -92,6 +94,7 @@ function touchEnded() {
 function touchStarted() {
     if(titleXTo!==-width) {
         titleXTo=-width;
+        crateYAccl = 5;
     } else {
         toX=height/7;
     }
