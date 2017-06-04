@@ -1,9 +1,3 @@
-var fontRegular, fontItalic, fontBold;
-function preload() {
-   fontRegular = loadFont("Lovelo Black.otf");
-   fontItalic = loadFont("Lovelo Line Bold.otf");
-   fontBold = loadFont("Lovelo Line Light.otf");
-}
 var x = -100;
 var titleXTo = 0;
 function setup() {
@@ -77,7 +71,7 @@ function game() {
     pop();
     fill(0);
     textSize(100);
-    textFont(fontItalic);
+    textFont("sans-serif");
     textAlign(CENTER,CENTER);
     text("Water\nWorks", titleX, height*7/16);
     titleX+=(titleXTo-titleX)/10;
