@@ -35,13 +35,12 @@ function game() {
     fill(103, 174, 202,90);
     rect(0,height*27/32,width,height);
     beginShape();
-    curveVertex(0,  91);
-    curveVertex(0, height*27/32+5*sin(frameCount-30));
-    curveVertex(width*1/5, height*27/32+5*sin(frameCount+30));
-    curveVertex(width*2/5, height*27/32+5*sin(frameCount+30));
-    curveVertex(width*3/5, height*27/32+5*sin(frameCount+60));
-    curveVertex(width*4/5, height*27/32+5*sin(frameCount+90));
-    curveVertex(width, height*27/32+5*sin(frameCount+120));
+    curveVertex(0, height*27/32+15*sin(frameCount-30));
+    curveVertex(width*1/5, height*27/32+15*sin(frameCount+30));
+    curveVertex(width*2/5, height*27/32+15*sin(frameCount+30));
+    curveVertex(width*3/5, height*27/32+15*sin(frameCount+60));
+    curveVertex(width*4/5, height*27/32+15*sin(frameCount+90));
+    curveVertex(width, height*27/32+15*sin(frameCount+120));
     endShape();
 }
 
