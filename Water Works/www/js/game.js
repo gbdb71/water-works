@@ -83,10 +83,18 @@ function game() {
         var diff=min((crateR*180/PI)%(90),90-((crateR*180/PI)+90)%(90));
         diff=(crateR*180/PI)%(90);
         //alert(diff);
-        if(diff===(crateR*180/PI)%(90)) {
-            crateR+=((crateR-diff*PI/180)-crateR)/4;
-        } else {
-            crateR+=((crateR+90-diff*PI/180)-crateR)/4;
+        if(diff<15) {
+            if(diff===(crateR*180/PI)%(90)) {
+                crateR+=((crateR-diff*PI/180)-crateR)/4;
+            } else {
+                crateR+=((crateR+90-diff*PI/180)-crateR)/4;
+            }
+            if(diff<5) {
+                crateY=-50;
+                crateR=0;
+                crateYAccl=5;
+                crateRAccl=0.1;
+            }
         }
     }
     pop();
