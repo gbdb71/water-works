@@ -8,7 +8,7 @@ var page = 1;
 function game() {
     background(247, 245, 230);
     fill(247, 245, 230);
-    stroke(99, 115, 118);
+    stroke(237, 230, 182);
     noFill();
     strokeWeight(13);
     push();
