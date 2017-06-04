@@ -58,8 +58,9 @@ function game() {
     vertex(width, height*27/32+14);
     endShape();
     push();
-    noStroke();
-    fill(255,77,111);
+    stroke(52,99,87);
+    strokeWeight(2);
+    fill(97,205,170);
     translate(width/2,crateY);
     rotate(crateR);
     rect(-crateS/2,-crateS/2,crateS,crateS);
