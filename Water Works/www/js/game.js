@@ -74,8 +74,8 @@ function game() {
     textFont("sans-serif");
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
-    text("WATER", titleX, height*24/64);
-    text("WORKS", titleX, height*29/64);
+    text("WATER", titleX, height*22/64);
+    text("WORKS", titleX, height*31/64);
     titleX+=(titleXTo-titleX)/10;
 }
 
