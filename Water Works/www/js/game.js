@@ -7,10 +7,15 @@ function setup() {
 var width,height;
 var toX = 0;
 var page = 1;
+var crateY = -50;
+var crateR = 0;
+var crateYAccl = 5;
+var crateRAccl = 0.100;
 function game() {
     background(237, 230, 182);
     fill(247, 245, 230);
-    stroke(229, 42, 111);
+    //stroke(229, 42, 111);
+    stroke(152, 75, 67);
     noFill();
     strokeWeight(13);
     push();
@@ -27,7 +32,7 @@ function game() {
     }
     pop();
     //line(width/2,height-x,width/2,height*3/4-x);
-    x+=(toX-x)/10;
+    x+=(toX-x)/6;
     noStroke();
     fill(103, 174, 202,90);
     rect(0,height*27/32+14,width,height);
@@ -43,6 +48,11 @@ function game() {
     curveVertex(width, height*27/32+14);
     vertex(width, height*27/32+14);
     endShape();
+    push();
+    translate(width/2,crateY);
+    rotate(crateR);
+    rect(-25,-25,50,50);
+    pop();
 }
 
 function draw() {
