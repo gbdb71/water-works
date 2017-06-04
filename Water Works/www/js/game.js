@@ -11,11 +11,11 @@ var toX = 0;
 var page = 1;
 var crateY = -50;
 var crateR = 0;
-var crateYAccl = 0;
+var crateYAccl = 5;
 var crateRAccl = 0.05;
 var titleX = -200;
 var crateS = 50;
-var cratePaused = false;
+var cratePaused = true;
 var hintLineFade = 0;
 function game() {
     background(229,209,196);
@@ -71,6 +71,8 @@ function game() {
         crateYAccl+=0.01;
         crateY+=crateYAccl;
         crateR+=crateRAccl;
+    } else {
+        crateY+=((height*3/4-x-crateS/2)-crateY)/4;
     }
     if(crateY+crateS*sqrt(2)/2>=height*3/4-x) {
         //crateY=-50;
@@ -107,7 +109,7 @@ function touchEnded() {
 function touchStarted() {
     if(titleXTo!==-width) {
         titleXTo=-width;
-        crateYAccl = 5;
+        cratePaused=false;
     } else {
         toX=height/7;
     }
