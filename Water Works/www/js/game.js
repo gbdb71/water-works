@@ -15,7 +15,7 @@ function game() {
     background(237, 230, 182);
     fill(247, 245, 230);
     //stroke(229, 42, 111);
-    stroke(152, 75, 67);
+    stroke(26, 41, 48);
     noFill();
     strokeWeight(13);
     push();
