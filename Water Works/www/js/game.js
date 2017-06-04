@@ -69,13 +69,13 @@ function game() {
         crateRAccl=0.1;
     }
     pop();
-    fill(0);
+    fill(103);
     textSize(100);
     textFont("sans-serif");
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
-    text("WATER", titleX, height*27/64);
-    text("WORKS", titleX, height*28/64);
+    text("WATER", titleX, height*26/64);
+    text("WORKS", titleX, height*29/64);
     titleX+=(titleXTo-titleX)/10;
 }
 
