@@ -21,7 +21,7 @@ function game() {
     fill(247, 245, 230);
     stroke(103,103,103,hintLineFade);
     noFill();
-    for(var i = 0; i < width/20; i++) {
+    for(var i = 0; i < width; i+=20) {
         line(i,width*(3/4+1/7),i+10,width*(3/4+1/7));
     }
     stroke(103,103,103);
