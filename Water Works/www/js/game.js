@@ -58,8 +58,8 @@ function game() {
     crateR+=crateRAccl;
     crateYAccl+=0.01;
     if(crateY+crateS*sqrt(2)>=height*3/4-x) {
-        crateY=-50;
-        crateR=0;
+        //crateY=-50;
+        //crateR=0;
         crateYAccl=5;
         crateRAccl=0.1;
     }
