@@ -6,9 +6,9 @@ var width,height;
 var x = -100;
 var page = 1;
 function game() {
-    background(247, 245, 230);
+    background(237, 230, 182);
     fill(247, 245, 230);
-    stroke(237, 230, 182);
+    stroke(229, 42, 111);
     noFill();
     strokeWeight(13);
     push();
