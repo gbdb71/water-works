@@ -33,12 +33,12 @@ function game() {
     rect(0,height*27/32,width,height);
     beginShape();
     vertex(0, height*27/32);
-    quadraticVertex(width*0/5, height*27/32+15*sin((frameCount-60)/5));
-    quadraticVertex(width*1/5, height*27/32+15*sin((frameCount+0)/5));
-    quadraticVertex(width*2/5, height*27/32+15*sin((frameCount+60)/5));
-    quadraticVertex(width*3/5, height*27/32+15*sin((frameCount+120)/5));
-    quadraticVertex(width*4/5, height*27/32+15*sin((frameCount+180)/5));
-    quadraticVertex(width*5/5, height*27/32+15*sin((frameCount+240)/5));
+    bezierVertex(width*0/5, height*27/32+15*sin((frameCount-60)/5));
+    bezierVertex(width*1/5, height*27/32+15*sin((frameCount+0)/5));
+    bezierVertex(width*2/5, height*27/32+15*sin((frameCount+60)/5));
+    bezierVertex(width*3/5, height*27/32+15*sin((frameCount+120)/5));
+    bezierVertex(width*4/5, height*27/32+15*sin((frameCount+180)/5));
+    bezierVertex(width*5/5, height*27/32+15*sin((frameCount+240)/5));
     vertex(width, height*27/32);
     endShape();
 }
