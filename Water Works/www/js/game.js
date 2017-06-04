@@ -12,7 +12,7 @@ var page = 1;
 var crateY = -50;
 var crateR = 0;
 var crateYAccl = 0;
-var crateRAccl = 0.100;
+var crateRAccl = 0.05;
 var titleX = -200;
 var crateS = 50;
 var hintLineFade = 0;
@@ -60,7 +60,7 @@ function game() {
     push();
     stroke(52,99,87);
     strokeWeight(2);
-    fill(97,205,170);
+    fill(52,99,87);
     translate(width/2,crateY);
     rotate(crateR);
     rect(-crateS/2,-crateS/2,crateS,crateS);
