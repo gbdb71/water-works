@@ -14,8 +14,7 @@ var crateRAccl = 0.100;
 function game() {
     background(237, 230, 182);
     fill(247, 245, 230);
-    //stroke(229, 42, 111);
-    stroke(181, 99, 87);
+    stroke(229, 42, 111);
     noFill();
     strokeWeight(13);
     push();
@@ -49,9 +48,13 @@ function game() {
     vertex(width, height*27/32+14);
     endShape();
     push();
+    noStroke();
+    fill(181, 99, 87);
     translate(width/2,crateY);
     rotate(crateR);
     rect(-25,-25,50,50);
+    crateY+=crateYAccl;
+    crateR+=crateRAccl;
     pop();
 }
 
