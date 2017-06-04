@@ -2,8 +2,8 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
 }
 
-var x = 50;
 var width,height;
+var x = -100;
 var page = 1;
 function game() {
     background(247, 245, 230);
@@ -21,6 +21,7 @@ function game() {
 function draw() {
     width = windowWidth;
     height = windowHeight;
+    x=-height/2;
     switch(page) {
         case 1:
             game();
