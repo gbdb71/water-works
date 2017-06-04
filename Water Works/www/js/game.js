@@ -13,9 +13,9 @@ var crateYAccl = 5;
 var crateRAccl = 0.100;
 var crateS = 50;
 function game() {
-    background(237, 230, 182);
+    background(229,209,196);
     fill(247, 245, 230);
-    stroke(229, 42, 111);
+    stroke(103,103,103);
     noFill();
     strokeWeight(13);
     push();
