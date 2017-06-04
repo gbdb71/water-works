@@ -11,6 +11,7 @@ var crateY = -50;
 var crateR = 0;
 var crateYAccl = 5;
 var crateRAccl = 0.100;
+var crateS = 50;
 function game() {
     background(237, 230, 182);
     fill(247, 245, 230);
@@ -31,7 +32,7 @@ function game() {
     }
     pop();
     //line(width/2,height-x,width/2,height*3/4-x);
-    x+=(toX-x)/6;
+    x+=(toX-x)/4;
     noStroke();
     fill(103, 174, 202,90);
     rect(0,height*27/32+14,width,height);
@@ -52,9 +53,16 @@ function game() {
     fill(181, 99, 87);
     translate(width/2,crateY);
     rotate(crateR);
-    rect(-25,-25,50,50);
+    rect(-crateS/2,-crateS/2,crateS,crateS);
     crateY+=crateYAccl;
     crateR+=crateRAccl;
+    crateYAccl+=0.01;
+    if(crateY+crateS*sqrt(2)>=height*3/4-x) {
+        crateY=-50;
+        crateR=0;
+        crateYAccl=5;
+        crateRAccl=0.1;
+    }
     pop();
 }
 
