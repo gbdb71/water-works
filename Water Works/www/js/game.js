@@ -18,6 +18,12 @@ function game() {
     line(width*3/16,height*3/4,width*13/16,height*3/4);
     for(var i = 1; i < 4; i++) {
         line(width*i/4,height*3/2,width*i/4,height*3/4);
+        if(i<3) {
+            for(var j = 0; j < 6; j++) {
+                line(width*i/4,height*3/2+width*(j)/4,width*(i+1)/4,height*3/2+width*(j+1)/4);
+                line(width*i/4,height*3/2+width*(j+1)/4,width*(i+1)/4,height*3/2+width*(j)/4);
+            } 
+        }
     }
     pop();
     //line(width/2,height-x,width/2,height*3/4-x);
@@ -39,7 +45,7 @@ function touchEnded() {
     return false;
 }
 function touchStarted() {
-    toX=height/8;
+    toX=height/7;
     // prevent default
     return false;
 }
