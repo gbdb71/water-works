@@ -15,6 +15,7 @@ var crateYAccl = 0;
 var crateRAccl = 0.05;
 var titleX = -200;
 var crateS = 50;
+var cratePaused = false;
 var hintLineFade = 0;
 function game() {
     background(229,209,196);
@@ -63,19 +64,20 @@ function game() {
     translate(width/2,crateY);
     rotate(crateR);
     rect(-crateS/2,-crateS/2,crateS,crateS);
-    crateY+=crateYAccl;
-    crateR+=crateRAccl;
     if(titleXTo===-width) {
         hintLineFade+=(60-hintLineFade)/10;
+    }
+    if(!cratePaused) {
         crateYAccl+=0.01;
+        crateY+=crateYAccl;
+        crateR+=crateRAccl;
     }
     if(crateY+crateS*sqrt(2)/2>=height*3/4-x) {
         //crateY=-50;
         //crateR=0;
         //crateYAccl=5;
         //crateRAccl=0.1;
-        crateYAccl=5;
-        crateRAccl=0.1;
+        cratePaused=true;
     }
     pop();
     fill(103);
