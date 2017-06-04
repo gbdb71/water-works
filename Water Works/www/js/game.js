@@ -135,7 +135,7 @@ function game() {
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
     text(TAP TO PLAY AGAIN, width/2, height*28/64);
-    scoreFade+=(scoreFadeTo-scoreFade)/10;
+    //scoreFade+=(scoreFadeTo-scoreFade)/10;
 }
 
 function draw() {
