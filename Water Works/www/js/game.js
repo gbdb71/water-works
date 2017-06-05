@@ -119,8 +119,8 @@ function game() {
                 if(ySpeedLimit<5) {
                     ySpeedLimit+=0.5;
                 }
-                if(rSpeedLimit<0.15) {
-                    ySpeedLimit+=0.025;
+                if(rSpeedLimit<0.2) {
+                    rSpeedLimit+=0.025;
                 }
                 score++;
                 cratePaused=false;
