@@ -24,7 +24,7 @@ var scoreFade = 0;
 var scoreFadeTo = 0;
 var mouseIsClicked = false;
 var ySpeedLimit = 2;
-var rSpeedLimit = 0.013;
+var rSpeedLimit = 0.011;
 function game() {
     background(229,209,196);
     fill(247, 245, 230);
@@ -115,12 +115,12 @@ function game() {
                 crateFadeTo=255;
                 crateR=random(0,TWO_PI);
                 crateYAccl=random(2,ySpeedLimit); // limit to 5
-                crateRAccl=random(0.01,rSpeedLimit); // limit to 0.15
+                crateRAccl=random(0.011,rSpeedLimit); // limit to 0.15
                 if(ySpeedLimit<5) {
-                    ySpeedLimit+=0.5;
+                    ySpeedLimit+=0.3;
                 }
                 if(rSpeedLimit<0.17) {
-                    rSpeedLimit+=0.02;
+                    rSpeedLimit+=0.01;
                 }
                 score++;
                 cratePaused=false;
