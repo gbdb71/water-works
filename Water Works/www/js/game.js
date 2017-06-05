@@ -1,8 +1,6 @@
 var x = -100;
 var titleXTo = 0;
-var PI;
 function setup() {
-    PI=PI;
     x=-windowHeight/2;
     titleXTo=windowWidth/2;
     createCanvas(windowWidth, windowHeight);
@@ -12,7 +10,7 @@ var width,height;
 var toX = 0;
 var page = 1;
 var crateY = -50;
-var crateR = 2*PI/180;
+var crateR = 5*Math.PI/180;
 var crateYAccl = 3.7;
 var crateRAccl = 0;
 var titleX = -200;
