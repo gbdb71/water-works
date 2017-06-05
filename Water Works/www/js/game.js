@@ -95,9 +95,9 @@ function game() {
         var diff = min((crateR2-45)%90,90-((crateR2-45)%90));
         if(abs(diff)>10) {
             if(diff===(crateR2-45)%90) {
-                crateR+=((crateR-(crateR2-45)%90*PI/180)-crateR)/4;
+                crateR+=((crateR-(crateR2-45)%90*PI/180+45*PI/180)-crateR)/4;
             } else {
-                crateR+=((crateR+(90-((crateR2-45)%90))*PI/180)-crateR)/4;
+                crateR+=((crateR+(90-((crateR2-45)%90))*PI/180-45*PI/180)-crateR)/4;
             }
             crateFadeTo=0;
             if(crateFade<1) {
