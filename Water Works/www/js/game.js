@@ -88,15 +88,16 @@ function game() {
         //crateRAccl=0.1;
         cratePaused=true;
         crateY+=((height*3/4-x-crateS/2)-crateY)/4;
-        //var crateR2 = crateR*180/PI; // convert to degrees;
-        var diff=min((crateR*180/PI)%(90),90-((crateR*180/PI))%(90));
+        var crateR2 = crateR*180/PI; // convert to degrees;
+        //var diff=min((crateR*180/PI)%(90),90-((crateR*180/PI))%(90));
         //diff=(crateR*180/PI)%(90);
         //alert(diff);
-        if(abs(diff)<25) {
-            if(diff===(crateR*180/PI)%(90)) {
-                crateR+=((crateR-diff*PI/180)-crateR)/4;
+        var diff = min(crateR2%45,45-(crateR2%45));
+        if(abs(diff)>10) {
+            if(diff===crateR2%45) {
+                crateR+=((crateR-crateR2%45*PI/180)-crateR)/4;
             } else {
-                crateR+=((crateR+90-diff*PI/180)-crateR)/4;
+                crateR+=((crateR+(45-(crateR2%45))*PI/180)-crateR)/4;
             }
             crateFadeTo=0;
             if(crateFade<1) {
