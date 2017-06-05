@@ -10,7 +10,7 @@ var width,height;
 var toX = 0;
 var page = 1;
 var crateY = -50;
-var crateR = 5*Math.PI/180;
+var crateR = 0;
 var crateYAccl = 3.7;
 var crateRAccl = 0;
 var titleX = -200;
@@ -92,33 +92,34 @@ function game() {
         //var diff=min((crateR*180/PI)%(90),90-((crateR*180/PI))%(90));
         //diff=(crateR*180/PI)%(90);
         //alert(diff);
-        var diff = min((crateR2-45)%90,90-((crateR2-45)%90));
-        if(abs(diff)>10) {
-            if(diff===(crateR2-45)%90) {
+        var diff = min(crateR2%90,crateR2%90-90);
+        if(abs(diff)<25) {
+            /*if(diff===(crateR2-45)%90) {
                 crateR+=((crateR-(crateR2-45)%90*PI/180+45*PI/180)-crateR)/4;
             } else {
                 crateR+=((crateR+(90-((crateR2-45)%90))*PI/180-45*PI/180)-crateR)/4;
-            }
+            }*/
+            crateR+=((crateR2-diff)*PI/180-crateR)/4
             crateFadeTo=0;
             if(crateFade<1) {
-                /*crateY=random(0-crateS,0-crateS-50);
+                crateY=random(0-crateS,0-crateS-50);
                 scoreFadeTo=0;
                 crateR=0;
                 crateYAccl=random(1,5);
                 crateRAccl=random(0.01,0.15);
                 score++;
-                cratePaused=false;*/
+                cratePaused=false;
             }
         } else {
             scoreFadeTo=500;
             if(mouseIsClicked&&scoreFade>470) {
-                /*crateY=random(0-crateS,0-crateS-50);
+                crateY=random(0-crateS,0-crateS-50);
                 scoreFadeTo=0;
                 crateR=2*PI/180;
                 crateYAccl=3.7;
                 crateRAccl=0;
                 score=0;
-                cratePaused=false;*/
+                cratePaused=false;
             }
         }
     }
