@@ -92,7 +92,13 @@ function game() {
         //var diff=min((crateR*180/PI)%(90),90-((crateR*180/PI))%(90));
         //diff=(crateR*180/PI)%(90);
         //alert(diff);
-        var diff = min(crateR2%90,crateR2%90-90);
+        var diff;
+        if(abs(crateR2%90)<abs(crateR2%90-90)) {
+            diff=crateR2%90;
+        } else {
+            diff=crateR2%90-90;
+        }
+        //var diff = min(crateR2%90,crateR2%90-90);
         if(abs(diff)<25) {
             /*if(diff===(crateR2-45)%90) {
                 crateR+=((crateR-(crateR2-45)%90*PI/180+45*PI/180)-crateR)/4;
