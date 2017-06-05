@@ -113,14 +113,14 @@ function game() {
                 crateY=random(0-crateS,0-crateS-50);
                 scoreFadeTo=0;
                 crateFadeTo=255;
-                crateR=0;
+                crateR=random(0,TWO_PI);
                 crateYAccl=random(2,ySpeedLimit); // limit to 5
                 crateRAccl=random(0.01,rSpeedLimit); // limit to 0.15
                 if(ySpeedLimit<5) {
                     ySpeedLimit+=0.5;
                 }
                 if(rSpeedLimit<0.15) {
-                    ySpeedLimit+=0.015;
+                    ySpeedLimit+=0.025;
                 }
                 score++;
                 cratePaused=false;
