@@ -10,7 +10,7 @@ var width,height;
 var toX = 0;
 var page = 1;
 var crateY = -50;
-var crateR = 2*PI/180;
+var crateR = 2;
 var crateYAccl = 3.7;
 var crateRAccl = 0;
 var titleX = -200;
@@ -131,7 +131,7 @@ function game() {
     text("WATER", titleX, height*22/64);
     text("WORKS", titleX, height*31/64);
     textSize(40);
-    text("TAP TO PLAY", titleX, height*48/64);
+    //text("TAP TO PLAY", titleX, height*48/64);
     titleX+=(titleXTo-titleX)/10;
     fill(103,103,103,scoreFade);
     textSize(100);
