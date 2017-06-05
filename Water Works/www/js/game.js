@@ -157,13 +157,13 @@ function game() {
     textFont("sans-serif");
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
-    text(score, width/2, height*22/64-height*1/14);
+    text(score, width/2, height*22/64-height*3/28);
     fill(103,103,103,scoreFade-130);
     textSize(30);
     textFont("sans-serif");
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
-    text("TAP TO PLAY AGAIN", width/2, height*28/64-height*1/14);
+    text("TAP TO PLAY AGAIN", width/2, height*28/64-height*3/28);
     scoreFade+=(scoreFadeTo-scoreFade)/10;
 }
 
