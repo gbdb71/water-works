@@ -88,8 +88,9 @@ function game() {
         //crateRAccl=0.1;
         cratePaused=true;
         crateY+=((height*3/4-x-crateS/2)-crateY)/4;
+        //var crateR2 = crateR*180/PI; // convert to degrees;
         var diff=min((crateR*180/PI)%(90),90-((crateR*180/PI))%(90));
-        diff=(crateR*180/PI)%(90);
+        //diff=(crateR*180/PI)%(90);
         //alert(diff);
         if(abs(diff)<25) {
             if(diff===(crateR*180/PI)%(90)) {
