@@ -32,7 +32,7 @@ function game() {
     stroke(103,103,103,hintLineFade);
     noFill();
     for(var i = 0; i < width; i+=40) {
-        line(i,height*(3/4-1/7),i+20,height*(3/4-1/7));
+        line(i,height*(3/4-3/14),i+20,height*(3/4-3/14));
     }
     stroke(103,103,103);
     strokeWeight(13);
@@ -157,13 +157,13 @@ function game() {
     textFont("sans-serif");
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
-    text(score, width/2, height*22/64);
+    text(score, width/2, height*22/64-height*1/14);
     fill(103,103,103,scoreFade-130);
     textSize(30);
     textFont("sans-serif");
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
-    text("TAP TO PLAY AGAIN", width/2, height*28/64);
+    text("TAP TO PLAY AGAIN", width/2, height*28/64-height*1/14);
     scoreFade+=(scoreFadeTo-scoreFade)/10;
 }
 
@@ -188,7 +188,7 @@ function touchStarted() {
         titleXTo=-width;
         cratePaused=false;
     } else {
-        toX=height/7;
+        toX=height*3/14;
     }
     // prevent default
     return false;
