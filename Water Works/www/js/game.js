@@ -1,6 +1,8 @@
 var x = -100;
 var titleXTo = 0;
+var PI;
 function setup() {
+    PI=PI;
     x=-windowHeight/2;
     titleXTo=windowWidth/2;
     createCanvas(windowWidth, windowHeight);
