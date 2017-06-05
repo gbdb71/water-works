@@ -10,7 +10,7 @@ var width,height;
 var toX = 0;
 var page = 1;
 var crateY = -50;
-var crateR = 2;
+var crateR = 2*PI/180;
 var crateYAccl = 3.7;
 var crateRAccl = 0;
 var titleX = -200;
