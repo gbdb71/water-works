@@ -101,24 +101,24 @@ function game() {
             }
             crateFadeTo=0;
             if(crateFade<1) {
-                crateY=random(0-crateS,0-crateS-50);
+                /*crateY=random(0-crateS,0-crateS-50);
                 scoreFadeTo=0;
                 crateR=0;
                 crateYAccl=random(1,5);
                 crateRAccl=random(0.01,0.15);
                 score++;
-                cratePaused=false;
+                cratePaused=false;*/
             }
         } else {
             scoreFadeTo=500;
             if(mouseIsClicked&&scoreFade>470) {
-                crateY=random(0-crateS,0-crateS-50);
+                /*crateY=random(0-crateS,0-crateS-50);
                 scoreFadeTo=0;
                 crateR=2*PI/180;
                 crateYAccl=3.7;
                 crateRAccl=0;
                 score=0;
-                cratePaused=false;
+                cratePaused=false;*/
             }
         }
     }
