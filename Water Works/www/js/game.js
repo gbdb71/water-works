@@ -11,8 +11,8 @@ var toX = 0;
 var page = 1;
 var crateY = -50;
 var crateR = 0;
-var crateYAccl = 5;
-var crateRAccl = 0.05;
+var crateYAccl = 3.7;
+var crateRAccl = 0;
 var titleX = -200;
 var crateS = 100;
 var cratePaused = true;
@@ -101,22 +101,22 @@ function game() {
             }
             crateFadeTo=0;
             if(crateFade<1) {
-                crateY=-50;
-                crateFadeTo=255;
+                crateY=random(-crateS,-crateS-50);
+                scoreFadeTo=0;
                 crateR=0;
-                crateYAccl=5;
-                crateRAccl=0.1;
+                crateYAccl=random(1,5);
+                crateRAccl=random(0.01,0.15);
                 score++;
                 cratePaused=false;
             }
         } else {
             scoreFadeTo=500;
             if(mouseIsClicked&&scoreFade>470) {
-                crateY=-50;
+                crateY=random(-crateS,-crateS-50);
                 scoreFadeTo=0;
                 crateR=0;
-                crateYAccl=5;
-                crateRAccl=0.1;
+                crateYAccl=3.7;
+                crateRAccl=0;
                 score=0;
                 cratePaused=false;
             }
@@ -124,12 +124,14 @@ function game() {
     }
     pop();
     fill(103);
-    textSize(120);
+    textSize(107);
     textFont("sans-serif");
     textStyle(BOLD);
     textAlign(CENTER,CENTER);
     text("WATER", titleX, height*22/64);
     text("WORKS", titleX, height*31/64);
+    textSize(40);
+    text("TAP TO PLAY", titleX, height*32/64);
     titleX+=(titleXTo-titleX)/10;
     fill(103,103,103,scoreFade);
     textSize(100);
