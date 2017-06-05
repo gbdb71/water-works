@@ -23,7 +23,7 @@ var score = 0;
 var scoreFade = 0;
 var scoreFadeTo = 0;
 var mouseIsClicked = false;
-var ySpeedLimit = 1;
+var ySpeedLimit = 2;
 var rSpeedLimit = 0.01;
 function game() {
     background(229,209,196);
@@ -114,7 +114,7 @@ function game() {
                 scoreFadeTo=0;
                 crateFadeTo=255;
                 crateR=0;
-                crateYAccl=random(1,ySpeedLimit); // limit to 5
+                crateYAccl=random(2,ySpeedLimit); // limit to 5
                 crateRAccl=random(0.01,rSpeedLimit); // limit to 0.15
                 if(ySpeedLimit<5) {
                     ySpeedLimit+=0.5;
@@ -134,7 +134,7 @@ function game() {
                 crateR=2*PI/180;
                 crateYAccl=3.7;
                 crateRAccl=0;
-                ySpeedLimit=1;
+                ySpeedLimit=2;
                 rSpeedLimit=0.01;
                 score=0;
                 cratePaused=false;
@@ -150,7 +150,7 @@ function game() {
     text("WATER", titleX, height*22/64);
     text("WORKS", titleX, height*31/64);
     textSize(40);
-    text("TAP TO PLAY", titleX, height*48/64);
+    text("TAP TO PLAY", titleX, height*40/64);
     titleX+=(titleXTo-titleX)/10;
     fill(103,103,103,scoreFade);
     textSize(100);
