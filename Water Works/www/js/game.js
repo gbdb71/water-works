@@ -24,7 +24,7 @@ var scoreFade = 0;
 var scoreFadeTo = 0;
 var mouseIsClicked = false;
 var ySpeedLimit = 2;
-var rSpeedLimit = 0.01;
+var rSpeedLimit = 0.013;
 function game() {
     background(229,209,196);
     fill(247, 245, 230);
@@ -119,8 +119,8 @@ function game() {
                 if(ySpeedLimit<5) {
                     ySpeedLimit+=0.5;
                 }
-                if(rSpeedLimit<0.2) {
-                    rSpeedLimit+=0.025;
+                if(rSpeedLimit<0.17) {
+                    rSpeedLimit+=0.02;
                 }
                 score++;
                 cratePaused=false;
@@ -135,7 +135,7 @@ function game() {
                 crateYAccl=3.7;
                 crateRAccl=0;
                 ySpeedLimit=2;
-                rSpeedLimit=0.01;
+                rSpeedLimit=0.013;
                 score=0;
                 cratePaused=false;
             }
