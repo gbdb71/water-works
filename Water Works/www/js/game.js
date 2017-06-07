@@ -119,7 +119,7 @@ function game() {
                 if(ySpeedLimit<5) {
                     ySpeedLimit+=0.3;
                 }
-                if(rSpeedLimit<0.17) {
+                if(rSpeedLimit<0.155) {
                     rSpeedLimit+=0.015;
                 }
                 score++;
